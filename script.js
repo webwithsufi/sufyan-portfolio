@@ -85,15 +85,18 @@ function AboutAnimation() {
 }
 
 function MouseEffects() {
-  Shery.mouseFollower({
-    skew: true,
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    duration: 1,
-  });
-  Shery.makeMagnet(".magnet", {
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    duration: 1,
-  });
+  if (window.innerWidth > 768) {
+    Shery.mouseFollower({
+      skew: true,
+      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+      duration: 1,
+    });
+
+    Shery.makeMagnet(".magnet", {
+      ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+      duration: 1,
+    });
+  }
 }
 
 LoaderAnimation();
