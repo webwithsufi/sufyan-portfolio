@@ -1,3 +1,32 @@
+function LoaderAnimation() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const letters = document.querySelectorAll(".text span");
+    const tl = gsap.timeline();
+    tl.to(letters, {
+      duration: 0.6,
+      y: 0,
+      stagger: 0.05,
+      ease: "power2.out",
+    })
+      .to(letters, {
+        "--clipPath": "inset(0% 0 0 0)",
+        duration: 0.8,
+        delay: 0.3,
+        ease: "power1.inOut",
+      })
+      .to(letters, {
+        duration: 0.6,
+        y: 100,
+        stagger: 0.05,
+        delay: 0.5,
+      })
+      .to(".loader", {
+        display: "none",
+      });
+  });
+}
+
+
 function AboutAnimation() {
   const container = document.querySelector(".container");
   const sections = gsap.utils.toArray(".container section");
@@ -67,5 +96,6 @@ function MouseEffects() {
   });
 }
 
+LoaderAnimation();
 AboutAnimation();
 MouseEffects();
