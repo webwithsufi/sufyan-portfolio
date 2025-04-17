@@ -612,50 +612,57 @@ section {
         font-size: 3vw;
     }
 
-    #contact {
-        height: 50vh;
-        padding: 3%;
-    }
-
-    #contact p {
-        margin: 2vw 0;
-    }
-
-    .c-left {
-        width: 40%;
-    }
-
-    .items h3 {
-        font-size: 2.5vw;
-    }
-
-    .items h4 {
-        font-size: 1.8vw;
-    }
-
-    #btns button {
-        font-size: 1.7vw;
-        padding: 1vw 2vw;
+    .contact-div {
+        height: 90%;
+        align-items: center;
+        flex-direction: column-reverse;
     }
 
     .c-right {
-        width: 55%;
+        width: 85%;
+        margin-top: 5vw;
+    }
+
+    .c-left {
+        justify-content: space-evenly;
+        width: 80%;
+        padding: 5vw 0;
+    }
+
+    .c-left .items {
+        gap: 5vw;
+    }
+
+    .items h3 {
+        font-size: 3vw;
+    }
+
+    .items h4 {
+        font-size: 2vw;
+    }
+
+    #btns button {
+        font-size: 2.2vw;
+        padding: 2vw 5vw;
+    }
+
+    #btns button i {
+        font-size: 2.5vw;
     }
 
     .c-right h2 {
         font-size: 4vw;
     }
 
-    .c-right input,
     .c-right textarea {
-        padding: 1.5vw 0;
+        height: 40%;
     }
 
-    .c-right button {
-        margin-top: 2vw;
+    .c-right input,
+    .c-right textarea {
+        padding: 3vw 0;
     }
 
     #para {
         padding: 4vw 0;
-    }
-}
+    }}
