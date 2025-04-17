@@ -569,6 +569,11 @@ section {
 
 
 @media (max-width : 767px) {
+
+    .text {
+        font-size: 4rem;
+    }
+    
     #nav h1 {
         font-size: 4vw;
     }
