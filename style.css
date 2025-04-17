@@ -1,0 +1,662 @@
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-regular-webfont.ttf);
+}
+
+@font-face {
+    font-family: "Plain Light";
+    src: url(./fonts/plain-light-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-regularitalic-webfont.ttf);
+}
+
+@font-face {
+    font-family: "silk serif";
+    src: url(./fonts/silkserif-lightitalic-webfont.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Plain Light";
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+#main {
+    position: relative;
+    background-color: #151515;
+    z-index: 99;
+}
+
+#page1 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+}
+
+#page1 #nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 2.3vw 5.5vw;
+}
+
+#nav h1 {
+    font-size: 1.8vw;
+    font-family: "silk serif";
+
+}
+
+#nav-part2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+#nav-part2 a {
+    font-size: 1.2vw;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80vh;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 6vw;
+    height: 100%;
+    width: 50%;
+    /* background-color: #333; */
+}
+
+.hero-left h3 {
+    font-size: 2vw;
+    font-family: "silk serif";
+}
+
+.hero-left h1 {
+    font-size: 5vw;
+    font-family: fantasy;
+    letter-spacing: 2px;
+    font-weight: 200;
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    margin-bottom: 2vw;
+    text-transform: uppercase;
+}
+
+
+.hero-left p {
+    font-size: 1.2vw;
+
+    letter-spacing: 0.5px;
+}
+
+
+.hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 45%;
+}
+
+.hero-image {
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(211, 211, 211, 0.3);
+
+}
+
+.hero-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    width: 40px;
+    border: 2px solid lightgray;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(211, 211, 211, 0.3);
+    cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    border: 2px solid lightgray;
+    border-top: transparent;
+    border-left: transparent;
+    transform: translate(-50%, -100%) rotate(45deg);
+    animation: scroll-down 2s ease-in-out infinite;
+}
+
+.scroll-down::before {
+    top: 30%;
+    animation-delay: 0.5s;
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+    }
+
+    30%,
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 90%;
+        opacity: 0;
+    }
+}
+
+/* ------------------wrapper------------------ */
+
+.wrapper {
+    overflow-x: hidden;
+    position: relative;
+}
+
+#about-heading {
+    position: fixed;
+    top: 5%;
+    width: 100vw;
+    text-align: center;
+    font-family: "silk serif";
+    font-size: 5vw;
+}
+
+svg {
+    position: absolute;
+    top: 12em;
+    left: 10vw;
+    width: 50vw;
+}
+
+svg .mask {
+    width: 0;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 300vw;
+}
+
+
+.container .col {
+    display: flex;
+    gap: 3em;
+}
+
+.container .col p {
+    font-size: 0.8rem;
+}
+
+.container section {
+    width: 100vw;
+    padding: 20vw 10vw;
+}
+
+.container section h1 {
+    font-family: "silk serif";
+    font-size: 3rem;
+    margin: 1vw 0;
+}
+
+.container section p {
+    font-size: 1.2rem;
+    width: 50vw;
+}
+
+section {
+    height: 100vh;
+}
+
+
+/* ------------------scroll------------------ */
+
+#scroll {
+    width: 100%;
+    height: 30vh;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#scroll #container {
+    height: 100%;
+    width: 100%;
+    padding: 2vw;
+    display: inline-block;
+    animation-name: Anime;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#container img {
+    height: 95%;
+    width: 10%;
+    border-radius: 50%;
+    margin: 0 1.2vw;
+}
+
+@keyframes Anime {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* -------------projects--------------- */
+
+#projects {
+    height: 110vh;
+    width: 100%;
+    padding: 0 5vw;
+}
+
+#projects>h1 {
+    font-family: "silk serif";
+    width: 100%;
+    text-align: center;
+    height: 20%;
+    font-size: 5vw;
+    border-bottom: 2px solid #fff;
+}
+
+.elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    height: 16%;
+    width: 100%;
+    padding: 0 2vw;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid #fff;
+}
+
+.elem:hover {
+    background-color: #fff;
+}
+
+.elem:hover h1,
+.elem:hover h2,
+.elem:hover h3 {
+    color: #030303;
+    font-family: "Plain Light";
+}
+
+.elem h3 {
+    width: 30%;
+    font-family: "silk serif";
+    font-size: 2vw;
+}
+
+.elem h1 {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    font-size: 1.7vw;
+    font-family: "silk serif";
+}
+
+.elem h1 i {
+    font-size: 3vw;
+    font-family: serif;
+    margin-left: 1vw;
+    color: #030303;
+    transition: all 0.5s ease-in;
+    display: none;
+}
+
+.elem:hover h1 i {
+    display: initial;
+}
+
+.elem h2 {
+    text-align: end;
+    width: 40%;
+    font-size: 1.7vw;
+    font-family: "silk serif";
+}
+
+/* ----------contact page----------- */
+
+#contact {
+    height: 100vh;
+    width: 100%;
+    padding: 3% 10%;
+}
+
+#contact h1 {
+    font-family: "silk serif";
+    font-size: 5vw;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 2vw;
+    padding: 2vw 4vw;
+    text-align: center;
+}
+
+.contact-div {
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+    width: 100%;
+}
+
+.c-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vw;
+    width: 40%;
+    height: 100%;
+}
+
+.c-left .items {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.items i {
+    padding: 1vw;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.items i:hover {
+    background-color: #fff;
+    color: #030303;
+}
+
+.items h3 {
+    font-size: 1.3vw;
+}
+
+.items h4 {
+    font-size: 1vw;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+#btns button {
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-right: 1vw;
+    padding: 1vw 3vw;
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+
+#btns button i {
+    font-size: 1.5vw;
+    margin-left: 0.5vw;
+}
+
+
+.c-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 40%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 1vw;
+    padding: 2vw;
+}
+
+
+.c-right h2 {
+    font-family: "Silk Serif";
+    font-size: 1.8vw;
+    color: #fff;
+}
+
+.c-right input,
+.c-right textarea {
+    padding: 1vw 0vw;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.c-right input::placeholder,
+.c-right textarea::placeholder {
+    color: #aaa;
+}
+
+.c-right textarea {
+    min-height: 30%;
+    resize: none;
+}
+
+.c-right button {
+    width: fit-content;
+    padding: 1vw 3vw;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 500;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#para {
+    padding: 2vw;
+    border-top: 2px solid #dadada;
+    margin-top: 2vw;
+    text-align: center;
+}
+
+
+@media (max-width : 667px) {
+    #nav h1 {
+        font-size: 3vw;
+    }
+
+    #nav-part2 a {
+        font-size: 2.2vw;
+    }
+
+    #page1 {
+        height: 60vh;
+    }
+
+    .hero {
+        height: 60vh;
+        background-color: #333;
+    }
+
+    .hero-left {
+        width: 60%;
+    }
+
+    .hero-right {
+        width: 40%;
+    }
+
+    .hero-left h3 {
+        font-size: 4vw;
+    }
+
+    .hero-left h1 {
+        font-size: 6vw;
+    }
+
+    .hero-left p {
+        font-size: 2vw;
+    }
+
+    .hero-image {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .scroll-down {
+        bottom: 5%;
+        height: 50px;
+        width: 35px;
+    }
+
+    .container section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20vw 5vw;
+    }
+
+    svg {
+        width: 75vw;
+    }
+
+    .container section h1 {
+        font-size: 6vw;
+    }
+
+    .container section p {
+        width: 100%;
+        font-size: 0.6rem !important;
+    }
+
+    #scroll {
+        height: 10vh;
+    }
+
+    #projects>h1 {
+        margin-top: 5vw;
+        height: 10%;
+    }
+
+    #projects {
+        height: 80vh;
+    }
+
+    .elem h3 {
+        font-size: 4vw;
+        width: 20%;
+    }
+
+    .elem h1 {
+        font-size: 3.5vw;
+        width: 40%;
+    }
+
+    .elem h2 {
+        font-size: 3vw;
+    }
+
+    #contact {
+        height: 50vh;
+        padding: 3%;
+    }
+
+    #contact p {
+        margin: 2vw 0;
+    }
+
+    .c-left {
+        width: 40%;
+    }
+
+    .items h3 {
+        font-size: 2.5vw;
+    }
+
+    .items h4 {
+        font-size: 1.8vw;
+    }
+
+    #btns button {
+        font-size: 1.7vw;
+        padding: 1vw 2vw;
+    }
+
+    .c-right {
+        width: 55%;
+    }
+
+    .c-right h2 {
+        font-size: 4vw;
+    }
+
+    .c-right input,
+    .c-right textarea {
+        padding: 1.5vw 0;
+    }
+
+    .c-right button {
+        margin-top: 2vw;
+    }
+
+    #para {
+        padding: 4vw 0;
+    }
+}
