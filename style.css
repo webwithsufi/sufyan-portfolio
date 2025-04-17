@@ -612,6 +612,10 @@ section {
         font-size: 3vw;
     }
 
+    #contact p {
+    font-size: 3vw;
+    }
+
     .contact-div {
         height: 90%;
         align-items: center;
@@ -661,6 +665,10 @@ section {
     .c-right input,
     .c-right textarea {
         padding: 3vw 0;
+    }
+
+    .c-right button {
+        margin-top: 1.5vw;
     }
 
     #para {
