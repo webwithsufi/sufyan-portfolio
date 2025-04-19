@@ -592,6 +592,19 @@ section {
         height: 80vh;
     }
 
+        .elem h3 {
+        font-size: 4vw;
+        width: 20%;
+    }
+
+    .elem h1 {
+        font-size: 3.5vw;
+    }
+
+    .elem h2 {
+        font-size: 3.5vw;
+    }
+
      #contact {
         height: 55vh;
         padding: 0vw 5vw;
